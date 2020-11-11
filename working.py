@@ -1,4 +1,3 @@
-a=1
-b=2
-c=a+b
-print(c)
+stroka="data{}"
+stroka=stroka.format(1)
+print(stroka)
