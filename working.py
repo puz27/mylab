@@ -10,7 +10,7 @@ stroka2=stroka2.format(a,b)
 print(stroka2)
 
 
-
+#shablony
 shablon='''
     interface = {}
     vlan = {}
@@ -18,5 +18,10 @@ shablon='''
 
 rezult=shablon.format('g0/1',2)
 print(rezult)
+
+
+#konvert to dvoicnaya
+rez2="{:b} {:b}".format(11,22)
+print(rez2)
 
 
