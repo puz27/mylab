@@ -14,6 +14,20 @@ print(unik)
 print('mnogestvo')
 vlan1 = {2,4,2}
 vlan2 = {1,7,8,2}
+
 print('peresechenie')
 peresechenie=vlan1.intersection(vlan2)
 print(peresechenie)
+
+print('obedenit')
+ob=vlan1.union(vlan2)
+print(ob)
+
+
+print('proverit tip dannuh')
+print(type(vlan1))
+
+
+
+
+
