@@ -1,12 +1,25 @@
 ip = input('insert IP')
 a=ip.split('.')
-#print(a[0])
+print(ip)
 #proverka
+"""
+#print(list(ip[11]))
+print('CHECK FOR LENGHT')
+if (list(ip[3])) != '.':
+    print('NOT CORRECT LENGHT')
+elif  (list(ip[7])) != '.':
+    print('NOT CORRECT LENGHT')
+elif  (list(ip[11])) != '.':
+    print('NOT CORRECT LENGHT')
+
+
+"""
 '''
 b=int(a[0])
 if b > 255:
     print('NOT CORRECT IP ADDRESS')
    '''
+
 id_add = {'1octet': int(a[0]),
           '2octet': int(a[1]),
           '3octet': int(a[2]),
