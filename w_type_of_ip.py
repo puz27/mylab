@@ -13,13 +13,13 @@ id_add = {'1octet': int(a[0]),
           '4octet': int(a[3]),
           }
 print('CHECK IP')
-if id_add['1octet'] > 255:
+if id_add['1octet'] > 255 or id_add['1octet'] < 0:
     print('ERROR IN 1 OCTET')
-elif  id_add['2octet'] > 255:
+elif  id_add['2octet'] > 255 or id_add['2octet'] < 0:
     print('ERROR IN 2 OCTET')
-elif id_add['3octet'] > 255:
+elif id_add['3octet'] > 255 or id_add['2octet'] < 0:
     print('ERROR IN 3 OCTET')
-elif id_add['4octet'] > 255:
+elif id_add['4octet'] > 255 or id_add['4octet'] < 0:
     print('ERROR IN 4 OCTET')
 
 print('TYPE OF IP:')
