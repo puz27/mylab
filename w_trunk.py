@@ -20,7 +20,7 @@ trunk = {
         '0/2': ['only', '11', '30'],
         '0/4': ['del', '17']
     }
-
+''''
 for intf, vlan in access.items():
     print('interface FastEthernet' + intf)
     for command in access_template:
@@ -28,3 +28,28 @@ for intf, vlan in access.items():
             print(' {} {}'.format(command, vlan))
         else:
             print(' {}'.format(command))
+'''
+for intf, data in trunk.items():
+    print('interface FastEthernet' + intf)
+    print(intf,data)
+    #print(type(data[0]))
+
+
+    if data[0] =='add':
+        print('ADD')
+        print('Interface'+intf)
+
+    elif data[0] =='only':
+        print('ONLY')
+        print('Interface' + intf)
+    else:
+        print('DELETE')
+        print('Interface' + intf)
+
+
+
+
+
+
+
+
