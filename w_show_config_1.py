@@ -20,7 +20,7 @@ with open('conf.txt') as f:
 
 print(slov)
 '''
-
+spisok=[]
 with open('conf2.txt') as f:
     #print(f.read())
     for line in f:
@@ -33,7 +33,8 @@ with open('conf2.txt') as f:
             speed=line.split()[1]
             print(speed)
             slov[int]=speed
+            spisok.append([int,speed])
 print(slov)
-
+print(spisok)
 
 
