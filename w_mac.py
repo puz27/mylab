@@ -3,6 +3,8 @@ with open('MAC_NEW','w') as r:
     r.close()
 
 with open('MAC') as f:
-    print(f.read())
-    f#or line in f:
-       # print(line)
+    for line in f:
+        if line.startswith(' 1') :
+                #line.split()
+                vlan,ma,_,int = line.split()
+                print(vlan,ma,int)
