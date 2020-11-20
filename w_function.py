@@ -6,7 +6,6 @@ def ofile(filename):
           return (f.read())
 r=ofile('MAC')
 print(r)
-'''
 
 def ofile2(filename):
     if os.path.exists(filename):
@@ -16,3 +15,10 @@ def ofile2(filename):
         print('NOT FINF FILE')
 
 ofile2('SWITCHfg')
+'''
+
+def kortez(a,b):
+    return (a,b)
+x,y=kortez(5,6)
+print(x)
+print(y)
