@@ -14,6 +14,11 @@ trunk_config = {
 def generate_trunk_config(trunk_config,trunk_mode_template):
     for i in trunk_config:
         print(i)
+        for z in trunk_mode_template:
+            if z.endswith('vlan'):
+                #print('VLAN')
+                z=z+str(trunk_config.get(i))
+            print(z)
 
 
 generate_trunk_config(trunk_config,trunk_mode_template)
