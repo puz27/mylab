@@ -9,12 +9,12 @@ access_template = [
     'spanning-tree bpduguard enable'
 ]
 
-intf_vlan_mapping = {'FastEthernet0/12':10,
+intf_vlan_mapping = {'FastEthernet0/12':22,
                      'FastEthernet0/14':11,
                      'FastEthernet0/16':17}
 
 
-def generate_access_config(intf_vlan_mapping, access_template):
+def generate_access_config(intf_vlan_mapping, access_template, port_security_template=False):
     print(access_template)
     print(intf_vlan_mapping)
 
@@ -25,7 +25,9 @@ def generate_access_config(intf_vlan_mapping, access_template):
                 #intf_vlan_mapping.get(i)
                 #print('VLAN')
                 z=z+ str(intf_vlan_mapping.get(i))
+                if port_security_template:
+                    print(port_security_template)
             print(z)
 
 
-generate_access_config(intf_vlan_mapping, access_template)
+generate_access_config(intf_vlan_mapping, access_template,port_security_template)
