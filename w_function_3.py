@@ -26,8 +26,13 @@ def generate_access_config(intf_vlan_mapping, access_template, port_security_tem
                 #print('VLAN')
                 z=z+ str(intf_vlan_mapping.get(i))
                 if port_security_template:
-                    print(port_security_template)
+                    #print(port_security_template)
+                    for k in port_security_template:
+                        print(k)
             print(z)
+
+
+generate_access_config(intf_vlan_mapping, access_template)
 
 
 generate_access_config(intf_vlan_mapping, access_template,port_security_template)
