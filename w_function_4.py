@@ -16,8 +16,10 @@ def generate_trunk_config(trunk_config,trunk_mode_template):
         print(i)
         for z in trunk_mode_template:
             if z.endswith('vlan'):
+
                 #print('VLAN')
-                z=z+str(trunk_config.get(i))
+                 print(str(trunk_config.get(i)))
+                #z=z+str(trunk_config.get(i))
             print(z)
 
 
