@@ -1,4 +1,8 @@
-
+port_security_template = [
+    'switchport port-security maximum 2',
+    'switchport port-security violation restrict',
+    'switchport port-security'
+]
 access_template = [
     'switchport mode access', 'switchport access vlan',
     'switchport nonegotiate', 'spanning-tree portfast',
