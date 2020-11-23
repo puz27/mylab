@@ -14,4 +14,13 @@ def generate_access_config(intf_vlan_mapping, access_template):
     print(access_template)
     print(intf_vlan_mapping)
 
+    for i in intf_vlan_mapping:
+        print(i)
+        for z in  access_template:
+            if z.endswith('vlan'):
+                #print('VLAN')
+                z=z+intf_vlan_mapping[i]
+            print(z)
+
+
 generate_access_config(intf_vlan_mapping, access_template)
