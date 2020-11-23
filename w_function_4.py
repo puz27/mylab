@@ -11,4 +11,9 @@ trunk_config = {
 }
 
 
-generate_trunk_config
+def generate_trunk_config(trunk_config,trunk_mode_template):
+    for i in trunk_config:
+        print(i)
+
+
+generate_trunk_config(trunk_config,trunk_mode_template)
