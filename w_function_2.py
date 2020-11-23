@@ -7,8 +7,10 @@ import ipaddress
 def checkip(ip):
     try:
         ipaddress.ip_interface(ip)
-        return True
+        #return True
+        print('ok')
     except ValueError as err:
-        return False
+        #return False
+        print('not ok')
 
-checkip('193434 2.168.1.1/24')
+checkip('192.162228.1.1/24')
