@@ -1,7 +1,7 @@
 import subprocess
 import ipaddress
 ips=['8.8.8.8','192.168.1.1','150.31.44.3']
-ips2=['192.168.1.1-10']
+ips2=['192.168.1.1-3','150.31.44.208']
 ip_yes=[]
 ip_no=[]
 '''
@@ -22,6 +22,7 @@ def checkip(ips):
 
 checkip(ips)
 '''
+# test ip from ips ranges
 for ip in ips2:
     if '-' in ip:
        # print('mnogestvo')
@@ -36,5 +37,16 @@ for ip in ips2:
         for ip in range(int(s),int(e)):
            #print(ip)
            print('pinging...',ipaddress.ip_address(ip))
-           subprocess.run('ping {} -c 2 -n'.format(ip), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+           rez=subprocess.run('ping {} -c 2 -n'.format(ip), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                           encoding='utf-8')
+           if rez.returncode == 0:
+               print(ip,'ok')
+           else:
+               print(ip,'not ok')
+    else:
+        rez = subprocess.run('ping {} -c 2 -n'.format(ip), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                             encoding='utf-8')
+        if rez.returncode == 0:
+            print(ip, 'ok')
+        else:
+            print(ip, 'not ok')
