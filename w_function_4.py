@@ -10,7 +10,7 @@ trunk_config = {
     'FastEthernet0/4': [17]
 }
 
-
+my_slov={}
 def generate_trunk_config(trunk_config,trunk_mode_template):
     for i in trunk_config:
         print(i)
@@ -19,9 +19,10 @@ def generate_trunk_config(trunk_config,trunk_mode_template):
                 stroka=str(trunk_config.get(i))
                 stroka=stroka.replace('[','').replace(']','')
                 #print(stroka)
-
                 z=z+stroka
             print(z)
+
+
 
 
 generate_trunk_config(trunk_config,trunk_mode_template)
