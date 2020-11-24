@@ -7,4 +7,4 @@ def myip(ip):
     except ValueError:
         return False
 
-print(myip('192.168.1.1'))
+#print(myip('192.168.1.1'))
