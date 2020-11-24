@@ -1,4 +1,5 @@
 import subprocess
+import ipaddress
 
 #see=subprocess.run("who")
 #see
@@ -10,7 +11,7 @@ import subprocess
 #print(myping2.stdout)
 #print(myoing2.stdout.decode('utf-8'))
 
-
+''''''
 def checkip(ip):
    rez=subprocess.run('ping {} -c 2 -n'.format(ip), shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding='utf-8')
    print('Pinging...')
@@ -22,4 +23,7 @@ def checkip(ip):
       print('no')
 
 
-checkip('8.8.8.8')
+checkip('150.31.8.8')
+'''
+net= ipaddress.ip_network('192.1.1.1/24')
+print(net)
