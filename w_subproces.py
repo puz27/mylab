@@ -13,6 +13,7 @@ import subprocess
 
 def checkip(ip):
    rez=subprocess.run('ping {} -c 2 -n'.format(ip), shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding='utf-8')
+   print('Pinging...')
    if rez.returncode == 0:
       print('yes')
       return True
@@ -21,4 +22,4 @@ def checkip(ip):
       print('no')
 
 
-checkip('150.8.8.8')
+checkip('8.8.8.8')
