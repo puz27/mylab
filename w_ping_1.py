@@ -1,5 +1,6 @@
 import subprocess
 import ipaddress
+import  pprint
 ips=['8.8.8.8','192.168.1.1','150.31.44.3']
 ips2=['192.168.1.1-3','150.31.44.208']
 ip_yes=[]
@@ -40,13 +41,19 @@ for ip in ips2:
            rez=subprocess.run('ping {} -c 2 -n'.format(ip), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                           encoding='utf-8')
            if rez.returncode == 0:
-               print(ip,'ok')
+               print('ok')
+               ip_yes.append(ipaddress.ip_address(ip))
            else:
-               print(ip,'not ok')
+               print('not ok')
+               ip_no.append(ipaddress.ip_address(ip))
     else:
         rez = subprocess.run('ping {} -c 2 -n'.format(ip), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                              encoding='utf-8')
         if rez.returncode == 0:
-            print(ip, 'ok')
+            print('ok')
+            ip_yes.append(ipaddress.ip_address(ip))
         else:
-            print(ip, 'not ok')
+            print('not ok')
+            ip_no.append(ipaddress.ip_address(ip))
+print(ip_yes)
+print(ip_no)
