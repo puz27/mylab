@@ -33,6 +33,7 @@ print('vivod with dicionary')
 log7='Ethernet0/5 10.10.10.1'
 info7=re.search('(?P<inter>\S+) (?P<io>\S+)',log5)
 print(info7.groupdict())
+print(info7.group('inter'))
 
 
 
