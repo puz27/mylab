@@ -9,7 +9,7 @@ with open('json_2.json','w') as f:
     json.dump(file,f)
 
 uri = 'https://portal5.cbr.ru/back/rapi2/Messages/?MinDateTime=$date&type=inbox'
-user = '89avramenkoNV007750004231'
+user = ''
 passw = ''
 
 resp=requests.get(uri,auth=(user,passw))
