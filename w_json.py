@@ -10,7 +10,7 @@ with open('json_2.json','w') as f:
 
 uri = 'https://portal5.cbr.ru/back/rapi2/Messages/?MinDateTime=$date&type=inbox'
 user = '89avramenkoNV007750004231'
-passw = 'N767fa32!QAZ1qaz'
+passw = ''
 resp=requests.get(uri,auth=(user,passw))
 print(resp.status_code)
 print(resp.text)
