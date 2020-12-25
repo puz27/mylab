@@ -12,6 +12,7 @@ uri = 'https://portal5.cbr.ru/back/rapi2/Messages/?MinDateTime=$date&type=inbox'
 user = ''
 passw = ''
 
+
 resp=requests.get(uri,auth=(user,passw))
 print(resp.status_code)
 print(resp.text)
