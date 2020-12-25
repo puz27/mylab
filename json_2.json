@@ -1,0 +1,1 @@
+{"access": ["switchport mode access", "switch port access vlan"], "trunk": ["switchport trunk enc", "switchport mode trunk"]}
